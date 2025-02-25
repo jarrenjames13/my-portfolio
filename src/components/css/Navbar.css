@@ -1,99 +1,101 @@
 /* General Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logo Styles */
+.navbar .logo h2 {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Navigation Links */
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Hamburger Icon (Visible on Small Screens) */
+.navbar .hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  /* Adjust Navbar Layout on Small Screens */
+  .navbar {
+    flex-direction: row;
     width: 100%;
-    top: 0;
-    z-index: 10;
+    align-items: flex-start; /* Align items to the left */
+    padding: 10px;
   }
-  
-  /* Logo Styles */
-  .navbar .logo h2 {
-    color: white;
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  /* Navigation Links */
+
   .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Transparent when not active */
+    transform: translateY(-100%); /* Initially hide the menu */
+    transition: visibility 0s 0.3s, opacity 0.3s ease,
+      transform 0.3s ease-in-out;
   }
-  
+
+  .navbar .nav-links.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+
   .navbar .nav-links li {
-    margin: 0 15px;
+    margin: 15px 0;
   }
-  
-  .navbar .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 8px 15px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .navbar .nav-links li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-  }
-  
-  /* Hamburger Icon (Visible on Small Screens) */
+
+  /* Show the Hamburger Icon on Small Screens */
   .navbar .hamburger {
-    display: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
+    margin-right: 1rem;
+    display: block;
   }
-  
-  /* Media Query for Mobile View */
-  @media (max-width: 768px) {
-    /* Adjust Navbar Layout on Small Screens */
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start; /* Align items to the left */
-      padding: 10px;
-    }
-  
-    .navbar .nav-links {
-      flex-direction: column;
-      width: 100%;
-      text-align: center;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
-      padding: 20px 0;
-      visibility: hidden; /* Hidden by default */
-      opacity: 0; /* Transparent when not active */
-      transform: translateY(-100%); /* Initially hide the menu */
-      transition: visibility 0s 0.3s, opacity 0.3s ease, transform 0.3s ease-in-out;
-    }
-  
-    .navbar .nav-links.active {
-      visibility: visible; /* Show the menu */
-      opacity: 1; /* Fully visible */
-      transform: translateY(0); /* Slide the menu in */
-      transition-delay: 0s; /* Remove delay for visibility */
-    }
-  
-    .navbar .nav-links li {
-      margin: 15px 0;
-    }
-  
-    /* Show the Hamburger Icon on Small Screens */
-    .navbar .hamburger {
-      display: block;
-    }
-  
-    .navbar .logo {
-      margin-bottom: 10px;
-    }
+
+  .navbar .logo {
+    margin-bottom: 10px;
   }
-  
+}
