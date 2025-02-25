@@ -1,6 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
-
+import Home from './components/Home'
+import About from './components/About'
 function App() {
 
 
@@ -8,7 +9,8 @@ function App() {
     <>
       <div>
       <Navbar/>
-        <h1>Jarren James Parungao </h1>
+      <Home/>
+      <About/>
       </div>
 
     </>
