@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <h2>MY SITE</h2>
+        <h2>Portfolio</h2>
       </div>
 
       {/* Hamburger icon on mobile */}
