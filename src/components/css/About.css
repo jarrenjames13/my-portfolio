@@ -4,6 +4,7 @@
     text-align: center;
     align-items: center;
     padding: 40px 20px;
+    background-color: rgb(39, 39, 39);
   }
   
   .title {
@@ -27,6 +28,7 @@
   }
   
   .content p {
+    color: #ffffff; 
     flex: 1;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -43,6 +45,7 @@
   
   /* Skill Bar Section */
   .skills-container {
+    color: #ffffff; 
     max-width: 600px;
     width: 100%;
     margin-top: 30px;
@@ -50,6 +53,7 @@
   
   .skills-title {
     font-size: 28px;
+    color: #ffffff; 
     margin-bottom: 20px;
   }
   
@@ -74,6 +78,7 @@
   }
   
   .skill-fill {
+    color: #ffffff; 
     height: 100%;
     background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6f61);
     text-align: right;
