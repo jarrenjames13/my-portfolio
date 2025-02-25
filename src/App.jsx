@@ -8,7 +8,7 @@ function App() {
     <>
       <div>
       <Navbar/>
-        <h1>Jarren James Parungao</h1>
+        <h1>Jarren James Parungao </h1>
       </div>
 
     </>
